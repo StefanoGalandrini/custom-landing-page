@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg-color: #3e3d46;
+	--main-color: #532b58;
+	--accent-color: #f0bb97;
+	--header-height: 10vh;
+	font-family: 'Lato';
+}
+
+.container {
+	max-width: 70vw;
+	margin: 0 auto;
+}
+
+body {
+	background-color: var(--bg-color);
+	padding-top: var(--header-height);
+	overflow: hidden;
+}
+
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--header-height);
+	background-color: var(--main-color);
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+	display: flex;
+	gap: 0.5rem;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+}
+
+header .content {
+	width: 50%;
+	padding-left: 6rem;
+}
+
+header .header-text {
+	font-size: 2rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: white;
+}
+
+header .navbar {
+	padding-right: 6rem;
+	width: 50%;
+	color: white;
+	font-size: 1.2rem;
+}
+
+header .menu {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+header a {
+	text-decoration: none;
+	color: #cccccc;
+	font-size: 1.3rem;
+	transition: all 300ms ease-in-out;
+}
+
+header a:hover {
+	color: white;
+	border-bottom: 3px solid white;
+}
+
+main {
+	position: absolute;
+	top: var(--header-height);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+	padding-top: 2rem;
+}
+
+.hero-section {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.home-title {
+	width: 100%;
+	color: rgba(30, 81, 85, 1);
+	font-family: 'Aclonica';
+	font-weight: Regular;
+	font-size: 3rem;
+	text-align: center;
+}
+
+
+.hero-img {
+	width: 50%;
+	min-width: 600px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	object-position: bottom center;
+	position: absolute;
+	bottom: -6rem;
+	right: -11rem;
+	border-radius: 50%;
+	box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	z-index: -1;
+}
+
+
+.footer-nav {
+	height: 6vh;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(70, 32, 77);
+	box-shadow: -5px -5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer-nav-items {
+	height: 100%;
+	margin-right: 60%;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.footer-nav-item {
+	color: white;
+	font-family: 'Lato';
+	cursor: pointer;
+}
